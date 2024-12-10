@@ -354,6 +354,49 @@ button:hover {
     font-style: italic;
 }
 
+.logo {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.logo img {
+    max-width: 200px;
+    height: auto;
+}
+
+.watch-now-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+    padding: 1rem 2rem;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.watch-now-btn:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 0, 0, 0.2);
+}
+
+.watch-now-btn svg {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+}
+
+.watch-now-btn:hover svg {
+    transform: translateX(4px);
+}
+
 @media (max-width: 768px) {
     .container {
         padding: 1rem;
