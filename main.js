@@ -167,6 +167,9 @@ document.addEventListener('DOMContentLoaded', () => {
             ? `${TMDB_IMAGE_BASE_URL}${movie.poster_path}`
             : null;
         
+        // Construct JustWatch URL - encode movie title for the search
+        const justWatchUrl = `https://www.justwatch.com/us/search?q=${encodeURIComponent(movie.title)}`;
+        
         container.innerHTML = `
             <div class="movie-recommendation">
                 ${posterPath 
@@ -174,6 +177,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     : `<div class="no-poster">No poster available</div>`
                 }
                 <h2 class="movie-title">${movie.title}</h2>
+                <a href="${justWatchUrl}" target="_blank" class="watch-now-btn">
+                    <span>Watch Now</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
             </div>
         `;
     }
