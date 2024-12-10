@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieMatch - Find Your Perfect Movie</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>MovieMatch</h1>
+            <p>Find your perfect movie match</p>
+        </header>
+
+        <section class="search-section">
+            <div class="search-container">
+                <input type="text" id="movie-search" placeholder="Search for a movie...">
+                <button id="search-btn">Search</button>
+                <button id="google-search-btn">Google Search</button>
+            </div>
+            <div id="search-results" class="results-section"></div>
+        </section>
+
+        <section class="recommendation-section">
+            <h2>Get Personalized Recommendations</h2>
+            
+            <div class="question" id="mood-question">
+                <h3>How are you feeling today?</h3>
+                <div class="options">
+                    <button class="option-btn" data-value="happy">Happy</button>
+                    <button class="option-btn" data-value="sad">Sad</button>
+                    <button class="option-btn" data-value="excited">Excited</button>
+                    <button class="option-btn" data-value="relaxed">Relaxed</button>
+                    <button class="option-btn" data-value="romantic">Romantic</button>
+                </div>
+            </div>
+
+            <div class="question" id="occasion-question" style="display: none;">
+                <h3>What's the occasion?</h3>
+                <div class="options">
+                    <button class="option-btn" data-value="alone">Solo Night</button>
+                    <button class="option-btn" data-value="date">Date Night</button>
+                    <button class="option-btn" data-value="family">Family Time</button>
+                    <button class="option-btn" data-value="friends">Friends Gathering</button>
+                </div>
+            </div>
+
+            <div class="question" id="genre-question" style="display: none;">
+                <h3>Choose your preferred genre</h3>
+                <div class="options">
+                    <button class="option-btn" data-value="action">Action</button>
+                    <button class="option-btn" data-value="comedy">Comedy</button>
+                    <button class="option-btn" data-value="drama">Drama</button>
+                    <button class="option-btn" data-value="horror">Horror</button>
+                    <button class="option-btn" data-value="romance">Romance</button>
+                    <button class="option-btn" data-value="scifi">Sci-Fi</button>
+                    <button class="option-btn" data-value="thriller">Thriller</button>
+                    <button class="option-btn" data-value="family">Family</button>
+                </div>
+            </div>
+
+            <div class="question" id="age-rating-question" style="display: none;">
+                <h3>Content Rating Preference</h3>
+                <div class="options">
+                    <button class="option-btn" data-value="family">Family-Friendly</button>
+                    <button class="option-btn" data-value="pg13">PG-13</button>
+                    <button class="option-btn" data-value="r">R-Rated</button>
+                    <button class="option-btn" data-value="any">Any Rating</button>
+                </div>
+            </div>
+
+            <div class="question" id="movie-age-question" style="display: none;">
+                <h3>How old should the movie be?</h3>
+                <div class="options">
+                    <button class="option-btn" data-value="classic">Classic (pre-2000)</button>
+                    <button class="option-btn" data-value="recent">Recent (last 5 years)</button>
+                    <button class="option-btn" data-value="any">Any Era</button>
+                </div>
+            </div>
+
+            <div class="question" id="language-question" style="display: none;">
+                <h3>Language Preference</h3>
+                <div class="options">
+                    <button class="option-btn" data-value="en">English</button>
+                    <button class="option-btn" data-value="foreign">Foreign Films</button>
+                    <button class="option-btn" data-value="any">Any Language</button>
+                </div>
+            </div>
+
+            <button id="get-recommendation" class="primary-btn" style="display: none;">Get Recommendation</button>
+            <div id="recommendation-results" class="results-section"></div>
+        </section>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
